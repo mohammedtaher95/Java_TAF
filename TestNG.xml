@@ -3,30 +3,14 @@
   <test name="Chrome Test">
     <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="tests.UserRegistrationTest"/>
-      <class name="tests.MyAccountTest"/>
-      <class name="tests.ContactUsTest"/>
-      <class name="tests.SearchProductTest"/>
-      <class name="tests.SearchProductTestWithAutoSuggest"/>
-      <class name="tests.EmailFriendTest"/>
-      <class name="tests.ChangeCurrencyTest"/>
-      <class name="tests.AddProductReviewTest"/>
-      <class name="tests.HoverMenuTest"></class>
+      <class name="testRunner.Runner"></class>
     </classes>
   </test> <!-- Test -->
 
   <test name="Firefox Test">
     <parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="tests.UserRegistrationTest"/>
-      <class name="tests.MyAccountTest"/>
-      <class name="tests.ContactUsTest"/>
-      <class name="tests.SearchProductTest"/>
-      <class name="tests.SearchProductTestWithAutoSuggest"/>
-      <class name="tests.EmailFriendTest"/>
-      <class name="tests.ChangeCurrencyTest"/>
-      <class name="tests.AddProductReviewTest"/>
-      <class name="tests.HoverMenuTest"></class>
+      <class name="testRunner.Runner"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
