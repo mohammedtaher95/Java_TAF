@@ -12,6 +12,10 @@ public class UserFormData {
     private String LastName;
     private String OldPassword;
     private String NewPassword;
+    private String Address;
+    private String City;
+    private String PostalCode;
+    private String PhoneNumber;
 
     public UserFormData() {
         Faker faker = new Faker();
@@ -23,7 +27,10 @@ public class UserFormData {
         LastName = faker.name().lastName();
         OldPassword = faker.number().digits(8).toString();
         NewPassword = faker.number().digits(9).toString();
-
+        Address = faker.address().streetAddress();
+        City = faker.address().city();
+        PostalCode = faker.number().digits(5).toString();
+        PhoneNumber = faker.phoneNumber().cellPhone();
     }
 
     public String getFullName() {
@@ -52,5 +59,24 @@ public class UserFormData {
     }
     public String getMessage() {
         return message;
+    }
+
+    public String getAddress()
+    {
+        return Address;
+    }
+
+    public String getCity()
+    {
+        return City;
+    }
+    public String getPostalCode()
+    {
+        return PostalCode;
+    }
+
+    public String getPhoneNumber()
+    {
+        return PhoneNumber;
     }
 }

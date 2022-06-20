@@ -2,6 +2,7 @@ package pages.loginPage;
 
 import driverActions.DriverActions;
 import org.openqa.selenium.By;
+import utilities.UserFormData;
 
 public class LoginPage extends DriverActions {
 
@@ -15,6 +16,8 @@ public class LoginPage extends DriverActions {
     By EmailRegisterField = By.id("email_create");
     By RegisterBtn = By.id("SubmitCreate");
 
+    private final UserFormData user = new UserFormData();
+
     public void userLogin(String email, String password)
     {
         Fill_in_Text(EmailField, email);
@@ -22,9 +25,9 @@ public class LoginPage extends DriverActions {
         ClickButton(LoginBtn);
     }
 
-    public void userStartRegistration(String email)
+    public void userStartRegistration()
     {
-        Fill_in_Text(EmailRegisterField, email);
+        Fill_in_Text(EmailRegisterField, user.getEmail());
         ClickButton(RegisterBtn);
     }
 }
